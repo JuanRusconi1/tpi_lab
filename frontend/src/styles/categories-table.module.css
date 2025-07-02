@@ -1,0 +1,226 @@
+.tableContainer {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.headerCell {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerIcon {
+  width: 18px;
+  height: 18px;
+  color: #6b7280;
+}
+
+.tableBody {
+  background: white;
+}
+
+.tableRow {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background: #f8fafc;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableCell {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+}
+
+.categoryInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.categoryIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconTag {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+}
+
+.categoryName {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.categoryDescription {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-width: 24rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.editButton {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  border: 1px solid #93c5fd;
+}
+
+.editButton:hover {
+  background: rgba(59, 130, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+.deleteButton {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.deleteButton:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateY(-1px);
+}
+
+.actionIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.tableFooter {
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footerText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    border-radius: 1rem;
+  }
+
+  .headerCell,
+  .tableCell {
+    padding: 0.75rem 1rem;
+  }
+
+  .categoryInfo {
+    gap: 0.5rem;
+  }
+
+  .categoryIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .iconTag {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .categoryName {
+    font-size: 0.875rem;
+  }
+
+  .categoryDescription {
+    font-size: 0.8rem;
+    max-width: 18rem;
+  }
+
+  .actions {
+    gap: 0.25rem;
+  }
+
+  .actionButton {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .actionIcon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .tableWrapper {
+    font-size: 0.875rem;
+  }
+
+  .headerCell:last-child,
+  .tableCell:last-child {
+    position: sticky;
+    right: 0;
+    background: inherit;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .categoryDescription {
+    max-width: 12rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
